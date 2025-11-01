@@ -1,73 +1,126 @@
-# Welcome to your Lovable project
+# Shubham Hirani - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website showcasing my experience as a Software Engineer II specializing in AI integration and backend development.
 
-**URL**: https://lovable.dev/projects/0bac2de5-0bb8-44e5-9617-d12ad979df32
+## About
 
-## How can I edit this code?
+This portfolio website highlights my expertise in:
+- AI Integration (OpenAI, Google Gemini, Anthropic)
+- Backend Development (Python, Node.js, TypeScript)
+- Full-stack Development
+- Cloud Technologies (GCP)
+- Microservices Architecture
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
+- **Smooth Animations**: Scroll-triggered animations and transitions throughout the site
+- **Floating Background**: Animated tech stack icons floating in the background
+- **Dark/Light Mode**: Theme toggle with AI-focused color scheme
+- **Interactive Navigation**: Sticky navbar with active section highlighting
+- **Project Showcase**: Featured AI projects with GitHub links
+- **Contact Form**: Direct email integration for easy communication
+- **Resume Download**: One-click resume download functionality
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0bac2de5-0bb8-44e5-9617-d12ad979df32) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built with modern web technologies:
 
-**Use your preferred IDE**
+- **React 18.3.1** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality React components
+- **Lucide React** - Beautiful icon library
+- **Framer Motion** - Animation utilities
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+src/
+├── components/
+│   ├── Hero.tsx           # Landing section with CTA buttons
+│   ├── About.tsx          # About me section
+│   ├── Skills.tsx         # Technical skills showcase
+│   ├── Experience.tsx     # Professional experience
+│   ├── Projects.tsx       # Featured projects
+│   ├── Education.tsx      # Educational background
+│   ├── Contact.tsx        # Contact form
+│   ├── Footer.tsx         # Footer section
+│   ├── Navbar.tsx         # Navigation bar
+│   ├── FloatingSkills.tsx # Background animation
+│   └── ui/                # shadcn/ui components
+├── hooks/
+│   └── use-scroll-animation.tsx # Custom scroll animation hook
+├── pages/
+│   └── Index.tsx          # Main page component
+└── lib/
+    └── utils.ts           # Utility functions
+```
 
-Follow these steps:
+## Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js (v16 or higher)
+- npm or yarn
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Installation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd shubham-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The build output will be in the `dist` directory.
 
-## What technologies are used for this project?
+## Key Features Implemented
 
-This project is built with:
+### Animation System
+- Custom scroll-triggered animations using Intersection Observer API
+- Persistent animations that don't disappear after loading
+- Staggered animation delays for visual appeal
+- Floating background tech icons with random movement patterns
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Theme System
+- AI/Developer-centric color scheme
+- Blue (#217 91% 60%) and Purple (#262 83% 58%) gradient theme
+- Cyberpunk-inspired dark mode
+- Smooth theme transitions
 
-## How can I deploy this project?
+### Brand Integration
+- LinkedIn-styled button (#0A66C2)
+- GitHub-styled button (adaptive black/white)
+- Gmail-styled button (#EA4335)
+- Consistent hover effects and animations
 
-Simply open [Lovable](https://lovable.dev/projects/0bac2de5-0bb8-44e5-9617-d12ad979df32) and click on Share -> Publish.
+## Contact
 
-## Can I connect a custom domain to my Lovable project?
+- **Email**: shubhamhirani27@gmail.com
+- **Phone**: +91 63556-21056
+- **Location**: Ahmedabad, Gujarat, India
+- **LinkedIn**: [linkedin.com/in/shubhamhirani](https://www.linkedin.com/in/shubhamhirani/)
+- **GitHub**: [github.com/shubham-hirani](https://github.com/shubham-hirani/)
 
-Yes, you can!
+## License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2025 Shubham Hirani. All rights reserved.
