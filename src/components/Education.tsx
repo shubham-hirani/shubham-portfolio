@@ -1,13 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const educationData = [
   {
-    degree: "Bachelor of Technology in Computer Science",
-    institution: "University",
-    year: "2018 - 2022",
-    description: "Focused on software engineering, data structures, and algorithms",
+    degree: "Bachelor of Engineering in Computer Science",
+    institution: "Vishwakarma Government Engineering College",
+    year: "July 2018 - March 2022",
+    description: "Comprehensive curriculum covering software engineering, data structures, algorithms, database systems, and advanced programming concepts",
   },
 ];
 
@@ -35,10 +36,19 @@ const certifications = [
 ];
 
 const Education = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: eduRef, isVisible: eduVisible } = useScrollAnimation();
+  const { ref: certRef, isVisible: certVisible } = useScrollAnimation();
+
   return (
     <section id="education" className="py-20 md:py-32 bg-muted/30">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center mb-16">
+        <div
+          ref={titleRef}
+          className={`flex flex-col items-center text-center mb-16 transition-all duration-700 ${
+            titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Education & Certifications
           </h2>
@@ -48,14 +58,22 @@ const Education = () => {
         </div>
 
         <div className="max-w-5xl mx-auto space-y-8">
-          <div>
+          <div
+            ref={eduRef}
+            className={`transition-all duration-700 ${
+              eduVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <GraduationCap className="h-6 w-6 text-accent" />
               Education
             </h3>
             <div className="space-y-4">
               {educationData.map((edu, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300">
+                <Card
+                  key={index}
+                  className="hover:shadow-lg hover:-translate-y-2 transition-all duration-500"
+                >
                   <CardHeader>
                     <CardTitle className="text-xl">{edu.degree}</CardTitle>
                   </CardHeader>
@@ -71,14 +89,22 @@ const Education = () => {
             </div>
           </div>
 
-          <div>
+          <div
+            ref={certRef}
+            className={`transition-all duration-700 ${
+              certVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               <Award className="h-6 w-6 text-accent" />
               Certifications
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {certifications.map((cert, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300">
+                <Card
+                  key={index}
+                  className="hover:shadow-lg hover:-translate-y-2 transition-all duration-500"
+                >
                   <CardContent className="p-6">
                     <div className="space-y-2">
                       <h4 className="font-semibold">{cert.name}</h4>

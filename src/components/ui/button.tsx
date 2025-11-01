@@ -15,7 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:shadow-md",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-accent text-accent-foreground hover:bg-accent/90 hover:shadow-lg shadow-[0_0_20px_hsl(var(--accent)/0.3)]",
+        hero: "bg-gradient-to-r from-primary to-accent text-white hover:shadow-[0_0_30px_hsl(var(--accent)/0.4)] hover:scale-105 shadow-lg",
+        linkedin: "bg-[#0A66C2] text-white hover:bg-[#004182] hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] hover:scale-105",
+        github: "bg-[#181717] dark:bg-[#ffffff] text-white dark:text-[#181717] hover:bg-[#2d2d2d] dark:hover:bg-[#f0f0f0] hover:shadow-[0_0_20px_rgba(24,23,23,0.4)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:scale-105",
+        gmail: "bg-[#EA4335] text-white hover:bg-[#C5221F] hover:shadow-[0_0_20px_rgba(234,67,53,0.4)] hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
